@@ -11,10 +11,12 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Arjun Mehta", role: "Founder & CEO", initials: "AM", experience: "28 years in marine supply" },
-  { name: "Priya Nair", role: "Head of Operations", initials: "PN", experience: "15 years in logistics" },
-  { name: "Suresh Krishnan", role: "Chief of Quality", initials: "SK", experience: "20 years in QA" },
-  { name: "Fatima Al-Rashid", role: "Export Manager", initials: "FA", experience: "12 years in trade" },
+  { name: "Ramesh Prasad", role: "Founder", initials: "RP", experience: "45+ years in trade" },
+  { name: "Kusum Devi", role: "Founder", initials: "KD", experience: "45+ years in trade" },
+  { name: "Raj Naugariya", role: "Head of Fisheries & Planning", initials: "RN", experience: "Fishing & nets specialist" },
+  { name: "Anand Naugariya", role: "Head of Production & Operations", initials: "AN", experience: "Production & logistics" },
+  { name: "Santosh Naugariya", role: "Head of Sourcing & Textiles", initials: "SN", experience: "Sourcing & textile expert" },
+  { name: "Anup Naugariya", role: "Head of Innovations", initials: "AN", experience: "Product & innovation lead" },
 ];
 
 export default function AboutPage() {
@@ -41,9 +43,9 @@ export default function AboutPage() {
           <div className="hidden lg:grid grid-cols-2 gap-4">
             {[
               { num: "45+", label: "Years" },
-              { num: "500+", label: "Clients" },
-              { num: "30+", label: "Countries" },
-              { num: "200+", label: "Team Members" },
+              { num: "300+", label: "Clients" },
+              { num: "30+", label: "Cities" },
+              { num: "50+", label: "Team Members" },
             ].map((s) => (
               <div key={s.label} className="glass-card rounded-2xl p-6 text-center">
                 <p className="text-4xl font-bold text-amber-400">{s.num}</p>

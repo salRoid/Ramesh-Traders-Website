@@ -90,7 +90,7 @@ export default function HeroSection() {
           {[
             { title: "Thread Yarn", sub: "100+ variants · 20+ colors", icon: "🧵" },
             { title: "Fishing Nets", sub: "Deep-sea to coastal grade", icon: "🎣" },
-            { title: "Marine Equipment", sub: "Professional & industrial", icon: "⚓" },
+            { title: "Marine Equipment", sub: "Professional & industrial", icon: "🪝" },
           ].map((item, i) => (
             <div
               key={item.title}

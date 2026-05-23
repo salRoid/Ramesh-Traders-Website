@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-              <Anchor className="w-5 h-5 text-[#0d3b66]" />
+              <span className="text-[#0d3b66] font-black text-sm leading-none">RT</span>
             </div>
             <span className="text-white font-bold text-lg tracking-tight">
               Ramesh<span className="text-amber-400"> Traders</span>

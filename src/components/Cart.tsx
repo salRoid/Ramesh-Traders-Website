@@ -35,27 +35,31 @@ export function CartDrawer() {
   function handleSubmit() {
     if (!name.trim() || items.length === 0) return;
 
-    const lines = [
-      `🛒 *New Order — Ramesh Traders*`,
-      `━━━━━━━━━━━━━━━━━━━━`,
-      ``,
-      `👤 *Customer Details*`,
-      `*Name:* ${name}`,
-      `*Mobile:* ${phone}`,
-      ...(address ? [`*Address:* ${address}`] : []),
-      ...(transport ? [`*Transport:* ${transport}`] : []),
-      ...(note ? [`*Note:* ${note}`] : []),
-      ``,
-      `📦 *Order Items*`,
-      `─────────────────────`,
-      ...items.map(
-        (i, idx) => `${idx + 1}. *${i.item_name}*\n   Qty: ${i.quantity} × ₹${Number(i.price).toLocaleString("en-IN")} / ${i.price_unit}`
-      ),
-      `─────────────────────`,
-      `💰 *Estimated Total: ₹${total.toLocaleString("en-IN")}*`,
-      ``,
-      `_Sent via Ramesh Traders website_`,
-    ];
+    const now = new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
+
+    const lines: string[] = [];
+    lines.push("🛒 *New Order — Ramesh Traders*");
+    lines.push(`_${now}_`);
+    lines.push("━━━━━━━━━━━━━━━━━━━━");
+    lines.push("");
+    lines.push("👤 *Customer Details*");
+    lines.push(`• *Name:* ${name}`);
+    if (phone)     lines.push(`• *Mobile:* ${phone}`);
+    if (address)   lines.push(`• *Address:* ${address}`);
+    if (transport) lines.push(`• *Transport:* _${transport}_`);
+    if (note)      lines.push(`• *Note:* _${note}_`);
+    lines.push("");
+    lines.push(`📦 *Order Items* _(${items.length} ${items.length === 1 ? "item" : "items"})_`);
+    lines.push("─────────────────────");
+    items.forEach((item, idx) => {
+      const subtotal = (Number(item.price) * item.quantity).toLocaleString("en-IN");
+      lines.push(`*${idx + 1}. ${item.item_name}*`);
+      lines.push(`   ${item.quantity} × ₹${Number(item.price).toLocaleString("en-IN")} / ${item.price_unit} = _₹${subtotal}_`);
+    });
+    lines.push("─────────────────────");
+    lines.push(`💰 *Total: ₹${total.toLocaleString("en-IN")}*`);
+    lines.push("");
+    lines.push("_Sent via store.salroid.me_");
 
     window.open(`https://wa.me/918092771093?text=${encodeURIComponent(lines.join("\n"))}`, "_blank");
     clear();

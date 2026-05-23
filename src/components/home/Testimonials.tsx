@@ -17,10 +17,10 @@ const testimonials = [
   },
   {
     quote:
-      "Excellent range of marine equipment. Their team helped us spec the right rigging for our fleet upgrade. Professional and knowledgeable.",
-    name: "James O'Brien",
-    role: "Operations Director, Atlantic Marine Co.",
-    avatar: "JO",
+      "Best quality ropes and nets in Patna. We have been buying from Ramesh Traders for years and the consistency is excellent.",
+    name: "Sunil Kumar Gupta",
+    role: "Wholesale Dealer, Patna",
+    avatar: "SK",
     rating: 5,
   },
 ];

@@ -98,7 +98,10 @@ function ProductCard({ item, onClick }: { item: CatalogueItem; onClick: () => vo
 
       {/* Info */}
       <motion.div layoutId={`info-${item.id}`} className="p-4 flex flex-col flex-1">
-        <h3 className="font-bold text-[#0d3b66] text-base leading-tight mb-3">{item.item_name}</h3>
+        <h3 className="font-bold text-[#0d3b66] text-base leading-tight mb-1">{item.item_name}</h3>
+        {item.field_values?.type?.en && (
+          <p className="text-xs text-gray-400 mb-3">{item.field_values.type.en} / packet</p>
+        )}
         <div className="mt-auto space-y-2">
           <div>
             <p className="text-xs text-gray-400 mb-0.5">Price</p>
@@ -220,24 +223,47 @@ function ProductDetail({ item, onClose }: { item: CatalogueItem; onClose: () => 
                   {item.taxonomy.name}
                 </span>
               )}
-              <h2 className="text-2xl font-bold text-[#0d3b66] leading-tight mb-5">{item.item_name}</h2>
+              <h2 className="text-2xl font-bold text-[#0d3b66] leading-tight mb-4">{item.item_name}</h2>
 
-              {/* Field values */}
-              {fields.length > 0 && (
-                <div className="space-y-2.5 mb-6">
-                  {fields.map((field) => {
-                    const val = item.field_values[field.field_name];
-                    if (!val?.en) return null;
-                    return (
-                      <div key={field.field_name} className="flex items-start gap-2.5 text-sm">
-                        {field.icon && <span className="text-lg leading-none shrink-0 mt-0.5">{field.icon}</span>}
-                        <span className="text-gray-500 shrink-0 w-24">{field.field_label}</span>
-                        <span className="text-[#0d3b66] font-semibold">{val.en}</span>
+              {/* Field values — from template if available, else raw field_values */}
+              {(() => {
+                const hasTemplateFields = fields.length > 0;
+                const rawEntries = Object.entries(item.field_values ?? {}).filter(([, v]) => v?.en);
+
+                if (hasTemplateFields) {
+                  const rows = fields.filter(f => item.field_values[f.field_name]?.en);
+                  if (rows.length === 0) return null;
+                  return (
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-6 p-4 bg-gray-50 rounded-2xl">
+                      {rows.map((field) => {
+                        const val = item.field_values[field.field_name];
+                        return (
+                          <div key={field.field_name} className="flex flex-col gap-0.5">
+                            <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide flex items-center gap-1">
+                              {field.icon && <span>{field.icon}</span>}{field.field_label}
+                            </span>
+                            <span className="text-sm font-bold text-[#0d3b66]">{val.en}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                }
+
+                if (rawEntries.length === 0) return null;
+                return (
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-6 p-4 bg-gray-50 rounded-2xl">
+                    {rawEntries.map(([key, val]) => (
+                      <div key={key} className="flex flex-col gap-0.5">
+                        <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide">
+                          {key.replace(/_/g, ' ')}
+                        </span>
+                        <span className="text-sm font-bold text-[#0d3b66]">{val.en}</span>
                       </div>
-                    );
-                  })}
-                </div>
-              )}
+                    ))}
+                  </div>
+                );
+              })()}
 
               {/* Price */}
               <div className="mt-auto pt-5 border-t border-gray-100">

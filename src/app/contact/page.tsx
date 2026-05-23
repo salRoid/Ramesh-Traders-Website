@@ -21,6 +21,23 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const lines: string[] = [];
+    lines.push("🙏 *New Enquiry — Ramesh Traders*");
+    lines.push("─────────────────────");
+    lines.push(`👤 *Name:* ${form.name}`);
+    if (form.company) lines.push(`🏢 *Company:* ${form.company}`);
+    if (form.email)   lines.push(`📧 *Email:* ${form.email}`);
+    if (form.product) lines.push(`📦 *Product Interest:* _${form.product}_`);
+    if (form.message) {
+      lines.push("─────────────────────");
+      lines.push(`💬 *Message:*\n${form.message}`);
+    }
+    lines.push("─────────────────────");
+    lines.push("_Sent via store.salroid.me_");
+
+    const text = encodeURIComponent(lines.join("\n"));
+    window.open(`https://wa.me/918092771093?text=${text}`, "_blank");
     setSubmitted(true);
   };
 
@@ -71,7 +88,7 @@ export default function ContactPage() {
               {
                 icon: Mail,
                 title: "Email",
-                lines: ["info@marinethread.com", "sales@marinethread.com"],
+                lines: ["rameshtraderssutawale@gmail.com"],
                 color: "bg-purple-100 text-purple-600",
               },
               {
@@ -103,9 +120,9 @@ export default function ContactPage() {
                   <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
                     <CheckCircle className="w-10 h-10 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0d3b66]">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-[#0d3b66]">WhatsApp Opened!</h3>
                   <p className="text-[#0d3b66]/60 max-w-sm">
-                    Thank you for reaching out. Our team will get back to you within 24 hours.
+                    Your enquiry has been pre-filled in WhatsApp. Just hit send!
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: "", email: "", company: "", product: "", message: "" }); }}

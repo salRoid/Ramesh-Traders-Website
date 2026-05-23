@@ -25,11 +25,11 @@ const products = [
     border: "border-cyan-100",
   },
   {
-    emoji: "⚓",
+    emoji: "🪝",
     title: "Marine Equipment",
     description:
-      "Complete range of ropes, buoys, anchors, and rigging hardware for commercial fleets. Built to withstand salt water, heavy loads, and continuous use at sea.",
-    tags: ["Ropes", "Buoys", "Rigging", "Anchors"],
+      "Complete range of ropes, nets, hooks, balls, and ranga for commercial and local use. Built for strength, durability, and everyday fishing needs.",
+    tags: ["Ropes", "Nets", "Hooks", "Balls"],
     href: "/products#equipment",
     bg: "from-amber-50 to-orange-50",
     accent: "bg-amber-100 text-amber-700",
