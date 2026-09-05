@@ -26,7 +26,7 @@ export interface HeroSlide {
 }
 
 const STATS = [
-  { label: "Years supplying", value: "135+" },
+  { label: "Years supplying", value: "65+" },
   { label: "Clients", value: "300+" },
   { label: "Tons per year", value: "30K+" },
   { label: "Cities served", value: "30+" },

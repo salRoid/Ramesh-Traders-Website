@@ -13,12 +13,12 @@ export default async function HeroSection() {
   // Until then each slide falls back to the woven-net artwork.
   const fallback: HeroSlide[] = [
     {
-      chip: "Supplying since 1890 · Patna City, Bihar",
+      chip: "Supplying since 1960 · Patna City, Bihar",
       title: "Thread, nets and marine gear — delivered at scale.",
       body: "From high-tensile fishing nets to specialty thread yarn and professional marine equipment — we supply the gear that keeps industries moving.",
       primary: { label: "Browse the catalogue", href: "/products" },
       secondary: { label: "WhatsApp us", href: WHATSAPP, external: true },
-      points: ["Supplying since 1890", "Mill-direct", "Quoted in 24 hrs"],
+      points: ["Supplying since 1960", "Mill-direct", "Quoted in 24 hrs"],
       chipsLabel: "Moving this week",
       chips: rangeChips(items),
       photo: media("/img/hero/shopfront.jpg"),

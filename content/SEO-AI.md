@@ -33,7 +33,7 @@ which is the same rule the visible content follows (see `AGENTS.md`).
 | Claim | Source | Asserted in |
 |---|---|---|
 | Name "Ramesh Traders" | `site-content.ts`, site-wide | JSON-LD, llms.txt, metadata |
-| Established 1890, family-run, third generation | Owner, Sept 2026 — see the warning below | `FOUNDING_YEAR` in `seo.ts` → JSON-LD `foundingDate`; llms.txt blockquote |
+| Established 1960, family-run, third generation | Owner, Sept 2026 | `FOUNDING_YEAR` in `seo.ts` → JSON-LD `foundingDate`; llms.txt blockquote |
 | Khajekalan, near Janta Market, Patna City, Bihar 800008 | `ADDRESS` in `site-content.ts` | JSON-LD `PostalAddress`, llms.txt, contact metadata |
 | 25.6097 N, 85.2017 E | The Google Maps embed already on `/contact` | JSON-LD `geo`, llms.txt |
 | Three phone numbers | `PHONES` / `WHATSAPP_NUMBERS` in `site-content.ts` | JSON-LD `contactPoint`, llms.txt |
@@ -67,26 +67,19 @@ without a source.
 - **Prices.** Not published anywhere; `llms.txt` tells assistants to route price
   questions to the enquiry form rather than guess.
 
-## ⚠️ The founding year needs confirming
+## The founding year
 
-`FOUNDING_YEAR` in `src/lib/seo.ts` is set to **1890** on the owner's word
-(Sept 2026). It is worth one more check, because it does not sit easily with the
-rest of the material:
+`FOUNDING_YEAR` in `src/lib/seo.ts` is **1960**, on the owner's word (Sept
+2026). It was briefly recorded as 1890, which sat badly with the rest of the
+material — the founders **Ramesh Prasad and Kusum Devi** are still part of the
+business and the story is a three-generation one. 1960 reconciles those.
 
-- the about page timeline opens at **1980** with "the shop opens", and lists
-  every milestone from there;
-- `FEATURES` says "45+ years expertise", which is the 1980 figure;
-- the about page names the founders, **Ramesh Prasad and Kusum Devi**, as still
-  part of the business, and describes it as three generations — which fits a
-  1980 founding far better than an 1890 one.
-
-Either the year is 1890 and the whole timeline and generation count need
-rewriting, or the year is 1980 and this constant is a digit transposition. Ask
-the owner directly. Whichever it is, change it **only** in `FOUNDING_YEAR` —
-every structured-data surface reads from there — and then fix the prose in
-`public/llms.txt` (the blockquote, "Established 1890") and in the about-page
-metadata description, which are the only two places the year is written out by
-hand.
+If it ever changes again, change it in `FOUNDING_YEAR` — every structured-data
+surface reads from there — and then fix the prose where the year is written out
+by hand: `public/llms.txt` (the blockquote), the about-page metadata
+description, the about hero chip and opening paragraph, the timeline's first
+entry, the footer, and the home hero chip. The "years supplying" stat on the
+about page and the home hero carousel is a derived figure — update it too.
 
 ## The RT admin host is excluded on purpose
 

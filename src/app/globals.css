@@ -910,7 +910,8 @@ a:hover {
   opacity: 0.95;
 }
 @media (max-width: 1100px) {
+  /* BrandMark carries display as an inline style, so this needs the override. */
   .f-hero-mark {
-    display: none;
+    display: none !important;
   }
 }

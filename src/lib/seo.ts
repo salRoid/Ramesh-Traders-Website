@@ -19,16 +19,15 @@ export const SITE_URL = "https://store.salroid.me";
 export const SITE_NAME = "Ramesh Traders";
 
 /**
- * Founding year, as given by the owner (2026-09).
+ * Founding year, as given by the owner (corrected to 1960, 2026-09; it was
+ * briefly recorded as 1890).
  *
- * NOTE: the marketing copy in `site-content.ts` and on the about page has
- * historically said 1980 with a "45+ years" framing, and the founders named on
- * the about page are still active in the business. If those ever disagree with
- * this constant again, the owner is the tie-breaker — change it here and every
- * structured-data surface follows. Nothing in this repo should derive a
- * duration ("45 years") from it; state the year and let the reader do the sum.
+ * The owner is the tie-breaker if the marketing copy ever disagrees with this
+ * again — change it here and every structured-data surface follows. Nothing in
+ * this repo should derive a duration ("45 years") from it; state the year and
+ * let the reader do the sum.
  */
-export const FOUNDING_YEAR = "1890";
+export const FOUNDING_YEAR = "1960";
 
 /**
  * Khajekalan, Patna City. Matches the Google Maps embed on /contact — do not

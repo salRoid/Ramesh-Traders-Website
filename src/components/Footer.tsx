@@ -28,7 +28,7 @@ export default function Footer() {
               >
                 Ramesh Traders
               </span>
-              <span className="f-meta">Khajekalan, Patna City · since 1890</span>
+              <span className="f-meta">Khajekalan, Patna City · since 1960</span>
             </span>
           </Link>
 

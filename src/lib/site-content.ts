@@ -14,7 +14,7 @@ export const FEATURES = [
     desc: "Dedicated account managers and responsive customer support.",
   },
   {
-    title: "Since 1890",
+    title: "Since 1960",
     desc: "Deep domain knowledge built over generations in the marine supply industry.",
   },
   {

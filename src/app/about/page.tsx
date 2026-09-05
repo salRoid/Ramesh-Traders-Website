@@ -8,20 +8,20 @@ import { FEATURES, QUOTES, WHATSAPP } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Our story — Ramesh Traders",
   description:
-    "Cotton yarn, thread and fishing nets from Khajekalan, Patna City since 1890. The family, the milestones and the standards behind Ramesh Traders.",
+    "Cotton yarn, thread and fishing nets from Khajekalan, Patna City since 1960. The family, the milestones and the standards behind Ramesh Traders.",
   alternates: { canonical: "/about" },
   openGraph: {
     type: "article",
     title: "Our story — Ramesh Traders",
     description:
-      "Cotton yarn, thread and fishing nets from Khajekalan, Patna City since 1890 — the family behind Ramesh Traders.",
+      "Cotton yarn, thread and fishing nets from Khajekalan, Patna City since 1960 — the family behind Ramesh Traders.",
     url: "/about",
     images: [{ url: "/img/hero/shopfront.jpg", width: 1200, height: 1600 }],
   },
 };
 
 const STATS = [
-  { label: "Years supplying", value: "135+" },
+  { label: "Years supplying", value: "65+" },
   { label: "Clients", value: "300+" },
   { label: "Tons per year", value: "30K+" },
   { label: "Cities served", value: "30+" },
@@ -44,7 +44,7 @@ const PILLARS = [
 
 const TIMELINE = [
   {
-    year: "1890",
+    year: "1960",
     title: "The shop opens",
     event:
       "A thread and net shop opens at Khajekalan, Patna City, supplying the fishing families along the Ganga.",
@@ -81,15 +81,16 @@ const TIMELINE = [
   },
   {
     year: "2026",
-    title: "A hundred and thirty-five years on",
+    title: "Sixty-five years on",
     event:
       "The family runs sourcing, production and planning — with the same counter in Khajekalan at the centre of it.",
   },
 ];
 
 const TEAM = [
-  { name: "Ramesh Prasad", role: "Founder", initials: "RP", note: "45+ years in the trade" },
-  { name: "Kusum Devi", role: "Founder", initials: "KD", note: "45+ years in the trade" },
+  // Notes state the year rather than a duration — see the rule in content/SEO-AI.md.
+  { name: "Ramesh Prasad", role: "Founder", initials: "RP", note: "At the counter since 1960" },
+  { name: "Kusum Devi", role: "Founder", initials: "KD", note: "At the counter since 1960" },
   {
     name: "Raj Naugariya",
     role: "Fisheries & planning",
@@ -203,7 +204,7 @@ export default function AboutPage() {
               color: "#fff",
             }}
           >
-            Est. 1890 · Khajekalan, Patna City
+            Est. 1960 · Khajekalan, Patna City
           </span>
           <h1
             className="f-rise"
@@ -220,7 +221,7 @@ export default function AboutPage() {
               animationDelay: "60ms",
             }}
           >
-            One hundred and thirty-five years behind one counter.
+            Sixty-five years behind one counter.
           </h1>
           <p
             className="f-rise"
@@ -233,7 +234,7 @@ export default function AboutPage() {
               animationDelay: "120ms",
             }}
           >
-            Ramesh Traders started in 1890 as a thread and net shop serving the
+            Ramesh Traders started in 1960 as a thread and net shop serving the
             fishing families along the Ganga. Generations later we supply mills,
             wholesalers and fleets across eastern India — and we still weigh out
             a single kilo for the man who has bought from us since the

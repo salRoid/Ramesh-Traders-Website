@@ -20,7 +20,7 @@ export default function AboutSection() {
             Built on trust, driven by quality
           </h2>
           <p className="f-sub" style={{ fontSize: 15, maxWidth: "48ch", marginBottom: 12 }}>
-            Since 1890, Ramesh Traders has been the backbone of marine supply
+            Since 1960, Ramesh Traders has been the backbone of marine supply
             chains across eastern India.
           </p>
           <p style={{ marginBottom: 22 }}>

@@ -35,7 +35,7 @@ export default function BrandMark({
     >
       <Image
         src={src}
-        alt="Ramesh Traders — cotton yarn & fishing nets, est. 1890"
+        alt="Ramesh Traders — cotton yarn & fishing nets, est. 1960"
         width={size}
         height={size}
         priority={priority}
