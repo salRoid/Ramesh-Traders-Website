@@ -1,0 +1,30 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "slug": "thread-yarn",
+      "source": "/Users/salroid/.codex/generated_images/01a0714e-e94c-7fd1-bd72-444460de003f/exec-996b1a16-df3f-4b07-9f7c-9229ec2bb529.png",
+      "prompt": "Use case: product-mockup\nAsset: premium website category photograph.\nOverhead photograph of cotton thread cones in rows — cream, red, orange and yellow yarn wound on cones. Even soft daylight, rich texture, tight crop so the cones fill the frame. Landscape 16:9, no text.\nArt direction: high-end editorial still-life photography for an established fishing-net and yarn merchant. Tactile authentic materials, sophisticated restrained composition, warm cream and timber tones, soft directional daylight, subtle shadows, exquisite fine texture, realistic photographic detail. Landscape 16:9. Keep the main identifying materials in the middle horizontal band so it also works cropped to a shallow 2.4:1 card. No lettering, branding, watermark, borders or graphic overlays. A single photograph, not a collage."
+    },
+    {
+      "slug": "fishing-nets",
+      "source": "/Users/salroid/.codex/generated_images/01a0714e-e94c-7fd1-bd72-444460de003f/exec-5eb0ce2b-5af6-4890-ba45-1d6f9c6435f7.png",
+      "prompt": "Use case: product-mockup\nAsset: premium website category photograph.\nTight photograph of green and cream nylon fishing net mesh, knots clearly visible, gently draped so the diamonds catch the light. Warm daylight, shallow depth of field. Landscape 16:9, no text.\nArt direction: high-end editorial still-life photography for an established fishing-net and yarn merchant. Tactile authentic materials, sophisticated restrained composition, warm cream and timber tones, soft directional daylight, subtle shadows, exquisite fine texture, realistic photographic detail. Landscape 16:9. Keep the main identifying materials in the middle horizontal band so it also works cropped to a shallow 2.4:1 card. No lettering, branding, watermark, borders or graphic overlays. A single photograph, not a collage."
+    },
+    {
+      "slug": "ropes-cordage",
+      "source": "/Users/salroid/.codex/generated_images/01a0714e-e94c-7fd1-bd72-444460de003f/exec-58e59824-b00b-4b19-a778-8b659ff45495.png",
+      "prompt": "Use case: product-mockup\nAsset: premium website category photograph.\nCoiled polypropylene and nylon rope in blue, white and green, stacked coils seen from above, twist and fibre texture sharp. Warm natural light. Landscape 16:9, no text.\nArt direction: high-end editorial still-life photography for an established fishing-net and yarn merchant. Tactile authentic materials, sophisticated restrained composition, warm cream and timber tones, soft directional daylight, subtle shadows, exquisite fine texture, realistic photographic detail. Landscape 16:9. Keep the main identifying materials in the middle horizontal band so it also works cropped to a shallow 2.4:1 card. No lettering, branding, watermark, borders or graphic overlays. A single photograph, not a collage."
+    },
+    {
+      "slug": "hooks-balls",
+      "source": "/Users/salroid/.codex/generated_images/01a0714e-e94c-7fd1-bd72-444460de003f/exec-a17ba000-60d2-4407-a3a6-56dc35bdf5f8.png",
+      "prompt": "Use case: product-mockup\nAsset: premium website category photograph.\nFlat-lay of commercial fishing hardware — nickel long-shank hooks in a tray, bright orange HDPE float balls and lead sinkers on weathered wood. Warm directional light, crisp detail. Landscape 16:9, no text.\nArt direction: high-end editorial still-life photography for an established fishing-net and yarn merchant. Tactile authentic materials, sophisticated restrained composition, warm cream and timber tones, soft directional daylight, subtle shadows, exquisite fine texture, realistic photographic detail. Landscape 16:9. Keep the main identifying materials in the middle horizontal band so it also works cropped to a shallow 2.4:1 card. No lettering, branding, watermark, borders or graphic overlays. A single photograph, not a collage."
+    },
+    {
+      "slug": "custom-orders",
+      "source": "/Users/salroid/.codex/generated_images/01a0714e-e94c-7fd1-bd72-444460de003f/exec-93bda997-dbf1-4570-8b7e-05dd9a88f600.png",
+      "prompt": "Use case: product-mockup\nAsset: premium website category photograph.\nWorkshop bench where netting is made to order — measuring tape, shuttle needle, twine spools and a partly finished net panel. Warm workshop light, honest and tactile. Landscape 16:9, no faces, no text.\nArt direction: high-end editorial still-life photography for an established fishing-net and yarn merchant. Tactile authentic materials, sophisticated restrained composition, warm cream and timber tones, soft directional daylight, subtle shadows, exquisite fine texture, realistic photographic detail. Landscape 16:9. Keep the main identifying materials in the middle horizontal band so it also works cropped to a shallow 2.4:1 card. No lettering, branding, watermark, borders or graphic overlays. A single photograph, not a collage."
+    }
+  ]
+}

@@ -1,21 +1,21 @@
 import HeroSection from "@/components/home/HeroSection";
-import StatsSection from "@/components/home/StatsSection";
-import ProductsPreview from "@/components/home/ProductsPreview";
-import WhyUs from "@/components/home/WhyUs";
-import Testimonials from "@/components/home/Testimonials";
-import CtaBanner from "@/components/home/CtaBanner";
 import CampaignSection from "@/components/CampaignSection";
+import Categories from "@/components/home/Categories";
+import BestSellers from "@/components/home/BestSellers";
+import AboutSection from "@/components/home/AboutSection";
+import Testimonials from "@/components/home/Testimonials";
+import ContactSection from "@/components/home/ContactSection";
 
 export default function HomePage() {
   return (
-    <>
+    <div style={{ paddingBottom: "clamp(32px,4vw,48px)" }}>
       <HeroSection />
-      <StatsSection />
       <CampaignSection />
-      <ProductsPreview />
-      <WhyUs />
+      <Categories />
+      <BestSellers />
+      <AboutSection />
       <Testimonials />
-      <CtaBanner />
-    </>
+      <ContactSection />
+    </div>
   );
 }

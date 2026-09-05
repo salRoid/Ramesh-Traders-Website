@@ -1,0 +1,117 @@
+{
+  "$comment": "Every image slot on the site. Each slot lights up automatically once the file exists at `path` — no code change needed (see src/lib/media.ts). Use the `prompt` verbatim in ChatGPT/Gemini image generation, or drop in a real photograph. Keep `aspect` exact; the site crops with object-fit: cover, so anything off-ratio loses its edges.",
+  "brand": {
+    "primaryLogo": "public/brand/logo-medallion-512.png",
+    "look": "Antique brass plaque, deep navy inlay, warm cream paper ground. Photographic-realistic relief, soft directional light from the upper left, subtle brushed-metal grain.",
+    "palette": {
+      "accent": "#127A63 (deep teal — UI accent)",
+      "brassLight": "#D8B978",
+      "brassDeep": "#8A6A34",
+      "navy": "#1B3A5C",
+      "paper": "#EFF1F0"
+    },
+    "photographyDirection": "Real working shots, not stock gloss. Warm afternoon light, shallow depth of field, honest textures — jute sacks, brass weighing scales, coiled rope, cotton dust in the light. Nothing staged-looking, no visible faces required, no text baked into the image.",
+    "logoSource": "brand-source/logo-transparent-original.png (4096px, transparent)",
+    "logoNote": "Transparent circular PNG, pre-trimmed to the artwork. Regenerate the 512/256/96 sizes and src/app/icon.png + apple-icon.png from the source via the rt-media skill."
+  },
+  "slots": [
+    {
+      "id": "hero.shopfront",
+      "path": "public/img/hero/shopfront.jpg",
+      "usedBy": "Home hero — slide 1 visual — FALLBACK ONLY. Live hero slides are published from the RT admin (Store → Content), which uploads to /uploads/hero/. This repo path is used only when no admin slide exists.",
+      "aspect": "3:4 portrait",
+      "size": "1200x1600",
+      "priority": "low",
+      "prompt": "Photograph of a long-established thread and fishing-net wholesale shop front in Patna City, Bihar, India. Rolls of fishing net and stacked cotton yarn cones visible through the open shutter, hand-painted signboard, warm late-afternoon sunlight, weathered concrete and brass. Documentary style, shallow depth of field, no readable text, no people's faces. Portrait 3:4."
+    },
+    {
+      "id": "hero.godown",
+      "path": "public/img/hero/godown.jpg",
+      "usedBy": "Home hero — slide 2 visual — FALLBACK ONLY. Live hero slides are published from the RT admin (Store → Content), which uploads to /uploads/hero/. This repo path is used only when no admin slide exists.",
+      "aspect": "3:4 portrait",
+      "size": "1200x1600",
+      "priority": "low",
+      "prompt": "Interior of a well-kept Indian wholesale godown stacked floor to ceiling with cartons of cotton thread cones and rolled fishing netting. Shafts of daylight through a high window, dust in the air, jute sacks, a brass weighing scale in the foreground. Warm, honest, documentary photography. Portrait 3:4, no text, no faces."
+    },
+    {
+      "id": "hero.nets",
+      "path": "public/img/hero/nets.jpg",
+      "usedBy": "Home hero — slide 3 visual — FALLBACK ONLY. Live hero slides are published from the RT admin (Store → Content), which uploads to /uploads/hero/. This repo path is used only when no admin slide exists.",
+      "aspect": "3:4 portrait",
+      "size": "1200x1600",
+      "priority": "low",
+      "prompt": "Close documentary photograph of hands hand-tying a fishing net, knots and mesh filling the frame, natural nylon twine in cream and blue, warm side light, shallow depth of field. Craft and precision. Portrait 3:4, no faces, no text."
+    },
+    {
+      "id": "category.thread-yarn",
+      "path": "public/img/category/thread-yarn.jpg",
+      "usedBy": "Home — Shop by category card",
+      "aspect": "16:9 landscape",
+      "size": "800x450",
+      "priority": "high",
+      "prompt": "Overhead photograph of cotton thread cones in rows — cream, red, orange and yellow yarn wound on cones. Even soft daylight, rich texture, tight crop so the cones fill the frame. Landscape 16:9, no text."
+    },
+    {
+      "id": "category.fishing-nets",
+      "path": "public/img/category/fishing-nets.jpg",
+      "usedBy": "Home — Shop by category card",
+      "aspect": "16:9 landscape",
+      "size": "800x450",
+      "priority": "high",
+      "prompt": "Tight photograph of green and cream nylon fishing net mesh, knots clearly visible, gently draped so the diamonds catch the light. Warm daylight, shallow depth of field. Landscape 16:9, no text."
+    },
+    {
+      "id": "category.ropes-cordage",
+      "path": "public/img/category/ropes-cordage.jpg",
+      "usedBy": "Home — Shop by category card",
+      "aspect": "16:9 landscape",
+      "size": "800x450",
+      "priority": "high",
+      "prompt": "Coiled polypropylene and nylon rope in blue, white and green, stacked coils seen from above, twist and fibre texture sharp. Warm natural light. Landscape 16:9, no text."
+    },
+    {
+      "id": "category.hooks-balls",
+      "path": "public/img/category/hooks-balls.jpg",
+      "usedBy": "Home — Shop by category card",
+      "aspect": "16:9 landscape",
+      "size": "800x450",
+      "priority": "medium",
+      "prompt": "Flat-lay of commercial fishing hardware — nickel long-shank hooks in a tray, bright orange HDPE float balls and lead sinkers on weathered wood. Warm directional light, crisp detail. Landscape 16:9, no text."
+    },
+    {
+      "id": "category.custom-orders",
+      "path": "public/img/category/custom-orders.jpg",
+      "usedBy": "Home — Shop by category card",
+      "aspect": "16:9 landscape",
+      "size": "800x450",
+      "priority": "medium",
+      "prompt": "Workshop bench where netting is made to order — measuring tape, shuttle needle, twine spools and a partly finished net panel. Warm workshop light, honest and tactile. Landscape 16:9, no faces, no text."
+    },
+    {
+      "id": "about.workshop",
+      "path": "public/img/about/workshop.jpg",
+      "usedBy": "About page — story panel (optional enrichment)",
+      "aspect": "4:3 landscape",
+      "size": "1400x1050",
+      "priority": "low",
+      "prompt": "Wide documentary photograph of a family-run Indian yarn and net trading shop interior — wooden shelving stacked with cone yarn, a ledger and brass scale on the counter, warm afternoon light from the street. Landscape 4:3, no faces, no readable text."
+    },
+    {
+      "id": "og.default",
+      "path": "public/img/og/default.jpg",
+      "usedBy": "Link previews on WhatsApp / Facebook / X for every page",
+      "aspect": "1.91:1 landscape",
+      "size": "1200x630",
+      "priority": "high",
+      "prompt": "Wide banner image: cotton yarn cones and coiled fishing net arranged on a warm cream surface, shot from above with generous empty space in the left third for a logo and title overlay. Soft even light, premium editorial product photography. Landscape 1200x630, no text."
+    }
+  ],
+  "conventions": {
+    "format": "JPEG for photographs, quality 82. PNG only for artwork that needs transparency.",
+    "maxBytes": 300000,
+    "naming": "lowercase-kebab-case, no spaces, no version suffixes",
+    "note": "Run the `rt-media` skill after dropping files in — it crops to the exact aspect, resizes, compresses and reports what is still missing."
+  },
+  "heroNote": "Hero images: upload via the RT admin at Store → Content, one per slide. The repo slots under public/img/hero/ are the offline fallback used only when the admin has no active slides.",
+  "campaignNote": "Campaign media: upload via the RT admin at Store → Campaigns. Never added to this repo. Briefs live in content/campaigns/."
+}

@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><title>RWD sweep</title>
+<style>body{margin:0;font:13px system-ui;background:#111;color:#eee}
+#f{border:0;background:#fff;display:block}</style>
+<iframe id="f" width="1280" height="900"></iframe>
+<script>
+window.sweep = async function(path, widths){
+  const f = document.getElementById('f');
+  const out = [];
+  for (const w of widths) {
+    f.width = w;
+    await new Promise(r => { f.onload = r; f.src = path + '?_=' + Math.random(); });
+    await new Promise(r => setTimeout(r, 1400));
+    const d = f.contentDocument, win = f.contentWindow;
+    const de = d.documentElement;
+    const vw = win.innerWidth;
+    const overflow = de.scrollWidth - de.clientWidth;
+    // find elements sticking out past the viewport
+    const bad = [];
+    d.querySelectorAll('body *').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.width > 0 && (r.right > vw + 1.5 || r.left < -1.5)) {
+        const sel = el.tagName.toLowerCase() + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0,2).join('.') : '');
+        if (!bad.some(b => b.sel === sel)) bad.push({ sel, left: Math.round(r.left), right: Math.round(r.right) });
+      }
+    });
+    out.push({ w, vw, overflow, offenders: bad.slice(0, 6) });
+  }
+  return out;
+};
+document.title = 'ready';
+</script>
