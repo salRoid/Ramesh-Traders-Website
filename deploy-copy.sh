@@ -9,7 +9,11 @@ LOCAL_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo ""
 echo "📤 Syncing files to droplet..."
-rsync -az \
+# --delete makes the droplet mirror the repo. Without it, files deleted here
+# lingered on the server and Next kept building them: a scaffold-era
+# src/app/favicon.ico survived that way and overrode the brand tab icon.
+# Excluded paths (node_modules, .next, env files) are protected from deletion.
+rsync -az --delete \
   --exclude='node_modules' \
   --exclude='.next' \
   --exclude='package-lock.json' \
